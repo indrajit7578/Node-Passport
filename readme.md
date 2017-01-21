@@ -10,10 +10,10 @@ To run the project-
 2. npm start 
 
 
-**************NOTE************************
+**************NOTE************************<br>
 Currently the files are not organized.
 
-***********TODO***************************
-1. Structuring the Project
-2. Using AngularJs to interact with the backend.
-3. Style the pages. (Probably Angular Material will be used)
+***********TODO***************************<br>
+1. Structuring the Project<br>
+2. Using AngularJs to interact with the backend.<br>
+3. Style the pages. (Probably Angular Material will be used)<br>
