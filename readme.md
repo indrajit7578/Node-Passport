@@ -14,6 +14,6 @@ To run the project-
 Currently the files are not organized.
 
 ***********TODO***************************<br>
-1. Structuring the Project<br>
+1. Structuring the Project--DONE<br>
 2. Using AngularJs to interact with the backend.<br>
 3. Style the pages. (Probably Angular Material will be used)<br>
