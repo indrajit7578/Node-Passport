@@ -9,10 +9,6 @@ To run the project-
 1. npm install
 2. npm start 
 
-
-**************NOTE************************<br>
-Currently the files are not organized.
-
 ***********TODO***************************<br>
 1. Structuring the Project--DONE<br>
 2. Using AngularJs to interact with the backend.<br>
