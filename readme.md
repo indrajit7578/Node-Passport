@@ -11,5 +11,4 @@ To run the project-<br>
 
 ***********TODO***************************<br>
 1. Structuring the Project--DONE<br>
-2. Using AngularJs to interact with the backend.<br>
-3. Style the pages.--DONE<br>
+2. Style the pages.--DONE<br>
