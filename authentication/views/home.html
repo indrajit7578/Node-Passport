@@ -1,5 +1,83 @@
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style1.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	</head>
 	<body>
-		<h2> Viewing the secured Page </h2>
+		<div class="container">
+			<div class="row profile">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4" ng-app="nodeApp" ng-controller="userCtrl">
+					<div class="profile-sidebar">
+						<!-- SIDEBAR USER TITLE -->
+						<div class="profile-usertitle">
+							<div class="profile-usertitle-name">
+								{{ username }}
+							</div>
+							<div class="profile-usertitle-job">
+								Developer
+							</div>
+						</div>
+						<!-- END SIDEBAR USER TITLE -->
+						
+						<!-- SIDEBAR MENU -->
+						<div class="profile-usermenu">
+							<ul class="nav">
+								<li class="active">
+									<a href="#">
+									<i class="glyphicon glyphicon-home"></i>
+									User Details </a>
+								</li>
+								<li>
+									<a href="#">
+									<i class="glyphicon glyphicon-user"></i>
+									{{ username }} </a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+									<i class="glyphicon glyphicon-ok"></i>
+									{{ user_email }} </a>
+								</li>
+								<li>
+									<a href="/signout">
+									<i class="glyphicon glyphicon-flag"></i>
+									Logout</a>
+								</li>
+							</ul>
+						</div>
+						<!-- END MENU -->
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+				</div>
+			</div>
+		</div>
 	</body>
+	<script>
+		var app = angular.module('nodeApp',[]);
+		app.controller('userCtrl',function($scope,$http){
+			 $http.get("/loggedin")
+				.then(function(response) {
+					console.log(response);
+					if(response !== 0) {
+						$scope.username = response.data.username;
+						$scope.user_email = response.data.email;
+					}
+					else {
+						//redirect
+						console.log("not signed in");
+					}
+					
+				});
+			//$scope.username = 'Indrajit';
+			//$scope.user_email = 'a@a.com';
+			
+		} );
+	</script>
 </html>

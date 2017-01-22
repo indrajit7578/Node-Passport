@@ -25,10 +25,10 @@ module.exports = function(passport){
 	}));
 
 	/* GET Registration Page */
-	router.get('/signup', function(req, res){
+	/*router.get('/signup', function(req, res){
 		res.sendFile(__dirname + '/views/register.html');
 		//res.sendFile('register.html');
-	});
+	});*/
 
 	/* Handle Registration POST */
 	router.post('/signup', passport.authenticate('signup', {
